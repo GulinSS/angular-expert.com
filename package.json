@@ -7,10 +7,20 @@
     "npm": "1.3"
   },
   "dependencies": {
-    "docpad": "~6.64.0"
+    "docpad": "~6.64.0",
+    "docpad-plugin-coffeescript": "2.x",
+    "docpad-plugin-less": "2.x",
+    "docpad-plugin-jade": "2.x",
+    "docpad-plugin-ghpages": "~2.4.3",
+    "docpad-plugin-marked": "~2.2.0"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x",
+    "bower": "~1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
-    "start": "node_modules/docpad/bin/docpad-server"
+    "start": "node_modules/docpad/bin/docpad-server",
+    "postinstall": "node node_modules/bower/bin/bower install"
   }
 }
